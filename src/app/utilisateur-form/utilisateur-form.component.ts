@@ -11,6 +11,7 @@ export class UtilisateurFormComponent implements OnInit {
 
   utilisateur : any =  { nom:"",prenom:"",age:0,email:""};
   idUser: number | undefined;
+  error: any;
 
   constructor(
     private utilisateurService: UtilisateurService,
@@ -54,7 +55,10 @@ export class UtilisateurFormComponent implements OnInit {
       this.router.navigate(['utilisateur']);
 
   },
-    error => console.error('Error registering user:', error)
+    error => {console.error('Error registering user:', error)
+            this.error = error.statusText
+  }
+
     );
   }
 

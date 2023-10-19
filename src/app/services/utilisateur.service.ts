@@ -28,7 +28,6 @@ export class UtilisateurService {
     .pipe(
       tap(
         (data: any) => {
-          console.log(data);
         },
         (error: any) => {
           console.error(error);
@@ -46,7 +45,6 @@ export class UtilisateurService {
   .pipe(
     tap(
       (data: any) => {
-        console.log(data);
       },
       (error: any) => {
         console.error(error);
@@ -65,7 +63,6 @@ deleteUtilisateur(id: any){
   .pipe(
     tap(
       (data: any) => {
-        console.log(data);
       },
       (error: any) => {
         console.error(error);

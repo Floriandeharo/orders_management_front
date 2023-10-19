@@ -9,7 +9,10 @@ OS: win32 x64
 
 Angular: 14.3.0
 
+taper 'npm install --force' pour installer les dependances 
+
 taper 'ng serve' pour lancer le serveur 
+
 
 # OrdersManagementFront
 

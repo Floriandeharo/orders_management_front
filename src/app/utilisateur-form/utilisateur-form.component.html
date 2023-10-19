@@ -4,6 +4,9 @@
   <!-- Author: FormBold Team -->
   <!-- Learn More: https://formbold.com -->
   <div class="mx-auto w-full max-w-[550px]">
+    <div *ngIf="!!error" class="font-regular relative block w-full rounded-lg bg-red-500 p-4 text-base leading-5 text-white opacity-100">
+      {{ error }}
+    </div>
     <form >
       <div class="-mx-3 flex flex-wrap">
         <div class="w-full px-3 sm:w-1/2">

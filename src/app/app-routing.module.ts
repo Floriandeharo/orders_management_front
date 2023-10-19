@@ -5,7 +5,7 @@ import { UtilisateurFormComponent } from './utilisateur-form/utilisateur-form.co
 import { UtilisateurReadComponent } from './utilisateur-read/utilisateur-read.component';
 
 const routes: Routes = [
-  {path: 'utilisateur', component : UtilisateurComponent},
+  {path: '', component : UtilisateurComponent},
   {path: 'utilisateur/create', component : UtilisateurFormComponent},
   {path: 'utilisateur/edit/:id', component : UtilisateurFormComponent},
   {path: 'utilisateur/read/:id', component : UtilisateurReadComponent},
