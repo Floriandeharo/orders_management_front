@@ -25,7 +25,7 @@ export class UtilisateurComponent implements OnInit {
 
     this.utilisateurService.getUtilisateurs().subscribe((response) => {
       this.utilisateurs = response.utilisateurs;
-      console.log('response',response.utilisateurs)
+      
     });
 
 
@@ -33,7 +33,7 @@ export class UtilisateurComponent implements OnInit {
 
   SupprimerUtilisateur(id: any){
     this.utilisateurService.deleteUtilisateur(id).subscribe((response) => {
-      console.log('response',response)
+      
       this.getUtilisateurs()
     });
 
