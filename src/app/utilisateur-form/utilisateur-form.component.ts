@@ -38,7 +38,7 @@ export class UtilisateurFormComponent implements OnInit {
 
       this.utilisateurService.getUtilisateurById(this.idUser).subscribe((response) => {
         this.utilisateur = response.user;
-       
+
         // this.sessionToEvent(this.classes);
       });
     }else{
@@ -56,7 +56,7 @@ export class UtilisateurFormComponent implements OnInit {
 
   },
     error => {console.error('Error registering user:', error)
-            this.error = error.statusText
+    this.error = error.error.message
   }
 
     );
@@ -72,7 +72,9 @@ export class UtilisateurFormComponent implements OnInit {
       this.router.navigate(['']);
 
   },
-    error => console.error('Error registering user:', error)
+    error => {console.error('Error registering user:', error)
+    this.error = error.error.message
+}
     );
   }
 
