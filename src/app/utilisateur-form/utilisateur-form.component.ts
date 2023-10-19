@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class UtilisateurFormComponent implements OnInit {
 
-  utilisateur : any =  { nom:"",prenom:"",age:0,email:""};
+  utilisateur : any =  { nom:"",prenom:"",age:18,email:""};
   idUser: number | undefined;
   error: any;
 
@@ -42,7 +42,7 @@ export class UtilisateurFormComponent implements OnInit {
         // this.sessionToEvent(this.classes);
       });
     }else{
-      this.utilisateur = { nom:"",prenom:"",age:0,email:""};
+      this.utilisateur = { nom:"",prenom:"",age:18,email:""};
     }
   };
 
