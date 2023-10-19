@@ -7,13 +7,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { UtilisateurFormComponent } from './utilisateur-form/utilisateur-form.component';
 import { FormsModule } from '@angular/forms';
+import { UtilisateurReadComponent } from './utilisateur-read/utilisateur-read.component';
 
 @NgModule({
   declarations: [
 
     AppComponent,
     UtilisateurComponent,
-    UtilisateurFormComponent
+    UtilisateurFormComponent,
+    UtilisateurReadComponent
   ],
   imports: [
     FormsModule,

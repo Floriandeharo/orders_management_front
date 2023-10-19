@@ -35,8 +35,6 @@ export class UtilisateurComponent implements OnInit {
     this.utilisateurService.deleteUtilisateur(id).subscribe((response) => {
       console.log('response',response)
       this.getUtilisateurs()
-
-
     });
 
   }

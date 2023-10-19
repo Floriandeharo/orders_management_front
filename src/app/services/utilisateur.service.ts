@@ -77,8 +77,58 @@ return Observable;
 
 }
 
+GetProduitsCommande(id: any){
+        const Observable:  Observable<any> = this.http.get(`${this.apiUrl}/commandes/produits/${id}`)
+        .pipe(
+          tap(
+            (data: any) => {
+              // console.log(data);
+            },
+            (error: any) => {
+              console.error(error);
+            }
+          )
+        );
+
+      return Observable;
+
+}
 
 
+GetTotalCommande(id: any){
+  const Observable:  Observable<any> = this.http.get(`${this.apiUrl}/commandes/total/${id}`)
+  .pipe(
+    tap(
+      (data: any) => {
+        // console.log(data);
+      },
+      (error: any) => {
+        console.error(error);
+      }
+    )
+  );
+
+return Observable;
+
+}
+
+
+GetCommande(id: any){
+  const Observable:  Observable<any> = this.http.get(`http://127.0.0.1:8000/api/call/procedure/nbr_order/${id}` )
+  .pipe(
+    tap(
+      (data: any) => {
+        // console.log(data);
+      },
+      (error: any) => {
+        console.error(error);
+      }
+    )
+  );
+
+return Observable;
+
+}
   // createServices()
 
 }
