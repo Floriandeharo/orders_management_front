@@ -7,7 +7,8 @@
 		</div>
 		<div class="flex items-center justify-between">
 			<div class="flex bg-gray-50 items-center p-2 rounded-md">
-        <button routerLink="create">Nouveau utilisateur</button>
+        <button   class="middle none center rounded-lg bg-green-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-green-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        data-ripple-light="true" routerLink="create">Nouvel utilisateur</button>
 
           </div>
 
@@ -42,7 +43,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr [routerLink]="['read', utilisateur.id] " *ngFor="let utilisateur of utilisateurs">
+							<tr title="voir info utilisateur" style="cursor: pointer;" [routerLink]="['read', utilisateur.id] " *ngFor="let utilisateur of utilisateurs">
 								<td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
 									<div class="flex items-center">
 										<div class="flex-shrink-0 w-10 h-10">
@@ -68,9 +69,11 @@
 										{{utilisateur.email}}
 									</p>
 								</td>
-								<td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-									<button [routerLink]="['edit', utilisateur.id] " >Modifier</button> /
-									<button (click)="SupprimerUtilisateur(utilisateur.id)" >Supprimer</button>
+								<td class="flex flex-row gap-4 px-5 py-5 border-b border-gray-200 bg-white text-sm">
+									<button   class="middle none center rounded-lg bg-blue-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  data-ripple-light="true" [routerLink]="['edit', utilisateur.id] " >Modifier</button>
+									<button   class="middle none center rounded-lg bg-pink-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  data-ripple-light="true" (click)="SupprimerUtilisateur(utilisateur.id)" >Supprimer</button>
 
 								</td>
 							</tr>
