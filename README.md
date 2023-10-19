@@ -1,3 +1,16 @@
+## configuration du projet
+telecharger NG cli (cli d'angular) : npm install -g @angular/cli
+
+'ng version' pour connaitre les versions necessaires : 
+Angular CLI: 14.2.13
+Node: 16.14.2
+Package Manager: npm 9.6.4
+OS: win32 x64
+
+Angular: 14.3.0
+
+taper 'ng serve' pour lancer le serveur 
+
 # OrdersManagementFront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
